@@ -4,7 +4,7 @@ if (!localStorage.getItem("count")) {
 let my = document.querySelector("p");
 if (!my) {
   Object.keys(localStorage).forEach((mykey) => {
-    if (mykey !== "count") {
+    if (mykey == "List"+mykey.slice(4,6)) {
       let newtext = JSON.parse(localStorage.getItem(`${mykey}`)).text;
       let newdate = JSON.parse(localStorage.getItem(`${mykey}`)).date;
       let newid = JSON.parse(localStorage.getItem(`${mykey}`)).id;
